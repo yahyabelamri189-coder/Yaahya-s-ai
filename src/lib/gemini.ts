@@ -5,7 +5,7 @@ const SYSTEM_PROMPT = `You are a respectful and knowledgeable Islamic assistant.
 export async function generateChatResponse(message: string, history: { role: "user" | "model"; parts: { text: string }[] }[]) {
   const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
   
-  const model = "gemini-3-flash-preview";
+  const model = "gemini-1.5-flash";
   
   const chat = ai.chats.create({
     model,
